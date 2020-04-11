@@ -7,7 +7,8 @@ This repo lets you quickly start and use the following services:
 2. iris-relay
 3. iris-frontend
 4. iris-sender
-5. mysql
+5. iris-admin
+6. mysql
 
 Getting started
 ---
@@ -40,3 +41,9 @@ Jump into a container:
 Kill a container
 
     docker rm -f $ID
+    
+
+Iris-Admin
+---
+
+Append iris-admin in docker-compose.yml from phamlamvuong/iris-admin:0.0.1 image.
