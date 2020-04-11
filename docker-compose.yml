@@ -50,6 +50,19 @@ services:
     networks:
       - iris_net
 
+  iris-admin:
+    depends_on:
+      - iris-api
+      - db
+    image: phamlamvuong/iris-admin:0.0.1
+    ports:
+      - '16651:16651'
+    restart: always
+    volumes:
+      - ./config/iris-admin/config.dev.yaml:/home/iris/iris-admin/configs/config.dev.yaml
+    networks:
+      - iris_net
+
   prometheus:
     image: prom/prometheus
     volumes:
